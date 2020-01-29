@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/index.css') }}"
+    />
+
+    <title>Weather Application</title>
+  </head>
+
+  <body>
+  <div class="container">
+      <div class="weather-card">
+          <h2> Weather App </h2>
+          <div class="search-location-group">
+              <input type="text" placeholder="Enter the location" id="location"/>
+              <button onclick="fetchWeather()"> Search </button>
+          </div>
+          <hr class="divider"/>
+          <div class="card">
+              <h3> Weather Forecast</h3>
+              <p id="day"> Thu Jan 30 2020 </p>
+              <p class="city">Nairobi, KE</p>
+              <div class="inner-box">
+                  <div class="temperature">
+                        <p class="temp">25</p> <span class="unit">°F</span>
+                  </div>
+                  <p class="weather"></p>
+              </div>
+          </div>
+          <h4 class="additional-info"> Additional Information</h4>
+          <div class="weather-conditions">
+              <div class="high-low">
+                  <span class="highOrLow"> Cloud Cover</span>
+                  <span class="humidity" > Humidity </span>
+              </div>
+              <div class="high-low">
+                  <span class="conditions" id="cloud"> 30 </span>
+                  <span class="conditions" id="humidity"> 74 </span>
+              </div>
+              <div class="high-low">
+                  <span class="highOrLow"> Wind Speed</span>
+                  <span class="humidity"> Visibility </span>
+              </div>
+              <div class="high-low">
+                  <span class="conditions" id="wind"> 4</span>
+                  <span class="conditions" id="visibility"> 9 </span>
+              </div>
+          </div>
+          <p id="hourly-summary"></p>
+
+      </div>
+
+  </div>
+  </body>
+  <script type="text/javascript" src="{{ url_for('static',filename='index.js')}}"></script>
+</html>
