@@ -28,6 +28,8 @@
 - run `python run.py` to start the server
 - navigate to `http://127.0.0.1:5000/`
 
-## Running tests
-- use this command to run test and the coverage report
+### Running tests
+-  While still on the virtual environment, (use `pipenv shell`
+ to activate the virtual environment)
+- Use this command to run test with the coverage report
 - `nosetests --with-coverage --cover-package=app && coverage report`
